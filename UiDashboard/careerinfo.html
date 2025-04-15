@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Info Form</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #37475A, #3B2B4F);
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: indianred;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Career Information</h1>
+
+    <form action="/submit-career" method="POST">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="years">Years of Experience:</label>
+        <input type="number" id="years" name="years" min="0" max="50" required>
+
+        <label for="major">Major:</label>
+        <input type="text" id="major" name="major" required>
+
+        <label for="interests">Career Interests:</label>
+        <input type="text" id="interests" name="interests" required>
+
+        <label for="jobType">Type of Job You Are Seeking:</label>
+        <select id="jobType" name="jobType" required>
+            <option value="">-- Select an option --</option>
+            <option value="internship">Internship</option>
+            <option value="part-time">Part-Time</option>
+            <option value="full-time">Full-Time</option>
+            <option value="freelance">Freelance</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label>Do You Have Prior Experience?</label><br>
+        <input type="radio" id="expYes" name="hasExperience" value="yes" required>
+        <label for="expYes">Yes</label>
+        <input type="radio" id="expNo" name="hasExperience" value="no">
+        <label for="expNo">No</label><br><br>
+
+        <label for="expDescription">If Yes, tell us more about your experience:</label>
+        <textarea id="expDescription" name="expDescription" rows="4" cols="40" placeholder="Optional..."></textarea>
+
+        <button type="submit">Save Career Info</button>
+    </form>
+
+</body>
+</html>

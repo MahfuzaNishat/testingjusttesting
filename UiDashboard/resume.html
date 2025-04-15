@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Resume Info</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #37475A, #3B2B4F);
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: indianred;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload Resume</h1>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="skills">Skills:</label><br>
+        <textarea id="skills" name="skills" rows="4" cols="40" placeholder="List your skills here..."></textarea><br>
+
+        <label for="resumeFile">Upload Resume (PDF):</label><br>
+        <input type="file" id="resumeFile" name="resumeFile" accept=".pdf"><br>
+
+        <button type="submit">Save Resume Info</button>
+    </form>
+
+</body>
+</html>

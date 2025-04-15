@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #37475A, #3B2B4F);
+    color: white;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-icon,
+  .profile-icon {
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .profile-icon img {
+    width: 8vw;
+    max-width: 50px;
+    min-width: 30px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .logo span {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  main {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .alert {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .instruction {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .button-item {
+    text-align: center;
+  }
+  
+  .button-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: white;
+    padding: 10px;
+  }
+  
+  .button-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  .help-icon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  
