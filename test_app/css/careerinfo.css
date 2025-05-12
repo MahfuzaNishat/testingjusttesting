@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #3b0a35, #e65c00);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    padding: 30px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    font-family:'Times New Roman', Times, serif;
+    margin: 20px 0 30px 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  form {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    padding: 40px 55px;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+  label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #dddddd;
+  }
+  input[type="radio"] {
+    margin: 0 8px 0 0;
+    transform: scale(1.2);
+  }
+  button[type="submit"] {
+    margin-top: 25px;
+    background: linear-gradient(to right, #ffa726, #fb8c00);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.5s;
+    width: 100%;
+  }
+  button[type="submit"]:hover {
+    background: linear-gradient(to right, #fb8c00, #ffa726);
+    transform: scale(1.05);
+  }  
+  
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Questions</title>
+  <link rel="stylesheet" href="../css/interviewquestions.css" />
+</head>
+<body>
+
+  <!-- Header with menu icon and profile icon -->
+  <header>
+    <div id="menu-toggle" class="menu-icon">&#9776;</div>
+    <div class="profile-icon">
+      <a href="../user/accountinfo.html">
+        <img id="userProfilePic" src="../assets/images/user-icon-on-transparent-background-free-png.webp" alt="Profile Icon" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../syntax_check/resumereview.html">Resume</a></li>
+      <li><a href="../career_readiness/career_readiness.html">Career Info</a></li>
+      <li><a href="../success_stories/success_stories.html">Success Stories</a></li>
+      <li><a href="../interview_questions/interviewquestions.html">Interview Questions</a></li>
+      <li><a href="../index.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Interview Questions</h1>
+
+    <form id="question-form">
+      <input type="text" id="career" placeholder="Career" required />
+      <textarea id="question" placeholder="Your Interview Question" required></textarea>
+      <textarea id="answer" placeholder="Optional: Suggested Answer"></textarea>
+      <button type="submit">Submit Question</button>
+    </form>
+
+    <button id="filter-btn">Toggle Filter</button>
+    <select id="career-filter" style="display:none;"></select>
+
+    <div id="questions-container"></div>
+  </div>
+
+  <script type="module" src="../src/interviewquestions.js"></script>
+</body>
+</html>

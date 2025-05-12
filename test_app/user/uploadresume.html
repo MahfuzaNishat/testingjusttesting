@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Resume</title>
+</head>
+<body>
+    <link rel = "stylesheet" href = "../css/uploadresume.css">
+    <h1>Upload Resume</h1>
+
+        <form>
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="name" name="fullName" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="skills">Skills:</label><br>
+        <textarea id="skills" name="skills" rows="4" cols="40" placeholder="List your skills here..."></textarea><br>
+
+        <label for="resumeFile">Upload Resume URL (Google Drive, Onedrive, or Dropbox link):</label><br>
+        <input type="text" id="resumeURL" name="resumeURL"><br>
+
+        <button type="submit">Save Resume Info</button>
+
+    </form>
+    <script type = "module" src = "../src/uploadresume.js"></script>
+</body>
+</html>

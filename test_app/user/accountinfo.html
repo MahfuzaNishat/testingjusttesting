@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Information</title>
+  <link rel="stylesheet" href="../css/accountinfo.css" />
+</head>
+<body>
+  <header>
+    <h1>Update Account Information</h1>
+    <a href="../dashboard/dashboard.html"><img id="backButton" src="../assets/images/back-arrow2.png" alt="back button"></a>
+  </header>
+
+<section>
+  <label for="profilePicture">Profile Picture:</label><br>
+  <input type="file" id="profilePicture" accept="image/*"><br>
+
+  <div class="profile-preview-container">
+    <img id="preview" src="../assets/images/default-profile.png" />
+    <button id="uploadPicBtn">Upload Picture</button>
+  </div>
+</section>
+
+
+  <hr>
+
+  <!-- Resume Info Form -->
+  <form id="resumeForm">
+    <h2>Resume Information</h2>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="skills">Skills:</label>
+    <textarea id="skills" rows="4" placeholder="List your skills..."></textarea>
+
+    <label for="resumeURL">Resume URL (Google Drive/Dropbox):</label>
+    <input type="url" id="resumeURL">
+  </form>
+
+  <hr>
+
+  <!-- Career Info Form -->
+  <form id="careerForm">
+    <h2>Career Information</h2>
+    <label for="jobTitle">Job Title:</label>
+    <input type="text" id="jobTitle" required>
+
+    <label for="company">Company Name:</label>
+    <input type="text" id="company" required>
+
+    <label for="years">Years of Experience:</label>
+    <input type="number" id="years" min="0" max="50" required>
+
+    <label for="major">Major:</label>
+    <input type="text" id="major" required>
+
+    <label for="interests">Career Interests:</label>
+    <input type="text" id="interests" required>
+
+    <label for="jobType">Job Type:</label>
+    <select id="jobType" required>
+      <option value="">--Select--</option>
+      <option value="internship">Internship</option>
+      <option value="part-time">Part-time</option>
+      <option value="full-time">Full-time</option>
+      <option value="freelance">Freelancing</option>
+      <option value="other">Other</option>
+    </select>
+
+    <p>Do You Have Prior Experience?</p>
+
+<div class="radio-group">
+  <input type="radio" id="expYes" name="hasExperience" value="yes" required>
+  <label for="expYes">Yes</label>
+
+  <input type="radio" id="expNo" name="hasExperience" value="no">
+  <label for="expNo">No</label>
+</div>
+
+
+  <br>
+  <button id="saveBtn">Save</button>
+
+  <hr>
+
+  <div>
+    <h2>Warning⚠️</h2>
+    <h4>If you choose to delete your account, all information associated with it will be lost!</h4>
+  </div>
+  <button id="deleteAccountBtn">Delete Account</button>
+
+  <!-- Password Modal -->
+  <div id="passwordModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000;">
+    <div style="background:white; padding:2rem; border-radius:8px; text-align:center;">
+      <h3>Re-enter Credentials to Confirm Deletion</h3>
+      <input type="email" id="modalEmail" placeholder="Email"><br><br>
+      <input type="password" id="modalPassword" placeholder="Password"><br><br>
+      <button id="confirmDeleteBtn">Confirm Delete</button>
+      <button onclick="document.getElementById('passwordModal').style.display='none'">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module" src="../src/accountinfo.js"></script>
+</body>
+</html>

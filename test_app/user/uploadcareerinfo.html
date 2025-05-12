@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Info Form</title>
+   
+</head>
+<body>
+    <link rel = "stylesheet" href = "../css/careerinfo.css">
+    <h1>Upload Career Information</h1>
+
+        <form id ="careerform">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="years">Years of Experience:</label>
+        <input type="number" id="years" name="years" min="0" max="50" required>
+
+        <label for="major">Major:</label>
+        <input type="text" id="major" name="major" required>
+
+        <label for="interests">Career Interests:</label>
+        <input type="text" id="interests" name="interests" required>
+
+        <label for="jobType">Type of Job You Are Seeking:</label>
+        <select id="jobType" name="jobType" required>
+            <option value="">-- Select an option --</option>
+            <option value="internship">Internship</option>
+            <option value="part-time">Part Time</option>
+            <option value="full-time">Full Time</option>
+            <option value="freelance">Freelancing</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label>Do You Have Prior Experience?</label><br>
+        <input type="radio" id="expYes" name="hasExperience" value="yes" required>
+        <label for="expYes">Yes</label>
+        <input type="radio" id="expNo" name="hasExperience" value="no">
+        <label for="expNo">No</label><br><br>
+
+        <label for="expDescription">If Yes, tell us more about your experience:</label>
+        <textarea id="expDescription" name="expDescription" rows="4" cols="40" placeholder="Optional..."></textarea>
+
+        <button type="submit">Save Career Info</button>
+    </form>
+    <script type="module" src="../src/uploadcareerinfo.js"></script>
+</body>
+</html>
